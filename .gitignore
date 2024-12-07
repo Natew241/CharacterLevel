@@ -1,8 +1,9 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Gradle specific
+.gradle/                         # Gradle build folder
+build/                           # Build output folder
+!**/src/main/**/build/           # Allow build directories inside source folders
+!**/src/test/**/build/           # Allow build directories inside test folders
+
 
 ### STS ###
 .apt_generated
