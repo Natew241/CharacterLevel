@@ -26,12 +26,13 @@ dependencies {
     runtimeOnly libs.com.h2database.h2
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
     compileOnly libs.org.projectlombok.lombok
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 group = 'com.practice'
 version = '0.0.1-SNAPSHOT'
 description = 'characterlevels'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 publishing {
     publications {
@@ -39,6 +40,20 @@ publishing {
             from(components.java)
         }
     }
+}
+
+sourceSets {
+    test {
+        java.srcDirs = ['src/test/java']
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.add('-parameters')
 }
 
 tasks.withType(JavaCompile) {
