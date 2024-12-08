@@ -45,4 +45,5 @@ public class PlayerControllerTest {
         verify(playerService, times(1)).getPlayer(playerId);
 
     }
+
 }
