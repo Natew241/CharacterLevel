@@ -33,8 +33,8 @@ public class PlayerControllerTest {
         Long playerId = 1L;
         RequestBuilder request = get("/player/{id}", playerId);
         Player expected = new Player();
-        expected.setPlayerName("Nate");
-        expected.setEmail("Nate@natedog.com");
+        expected.setPlayerName("Joe Shmo");
+        expected.setEmail("jshmo@someemail.com");
         when(playerService.getPlayer(playerId)).thenReturn(expected);
         MvcResult result = mockMvc.perform(request)
                 .andExpect(status().isOk()).andReturn();

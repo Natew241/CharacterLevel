@@ -4,7 +4,6 @@ package com.practice.characterlevels.Service;
 import com.practice.characterlevels.entitiy.Player;
 import com.practice.characterlevels.entitiy.World;
 import com.practice.characterlevels.repository.PlayerRepository;
-import com.practice.characterlevels.repository.WorldRepository;
 import com.practice.characterlevels.service.PlayerServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +15,6 @@ import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
