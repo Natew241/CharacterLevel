@@ -5,6 +5,7 @@ import com.practice.characterlevels.entitiy.World;
 import com.practice.characterlevels.exceptions.WorldNotFoundException;
 import com.practice.characterlevels.repository.PlayerRepository;
 import com.practice.characterlevels.repository.WorldRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -46,6 +47,7 @@ public class WorldServiceImpl implements WorldService {
         return world.getPlayers();
     }
 
+    @Transactional
     @Override
     public World signPlayerUpForWorld(Long worldId, Long playerId){
         World world = getWorld(worldId);

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -42,6 +43,6 @@ public class World {
             joinColumns = @JoinColumn(name = "world_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "player_id", referencedColumnName = "id")
     )
-    private Set<Player> players;
+    private Set<Player> players = new HashSet<>();
 
 }

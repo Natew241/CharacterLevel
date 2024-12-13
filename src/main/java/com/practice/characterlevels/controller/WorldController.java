@@ -40,8 +40,8 @@ public class WorldController {
     }
 
     @PutMapping("/{worldId}/player/{playerId}")
-    public ResponseEntity<World> signPlayerUpForWorld(@PathVariable Long worldId, @PathVariable Long playerID){
-        return new ResponseEntity<>(worldService.signPlayerUpForWorld(worldId, playerID ), HttpStatus.OK);
+    public ResponseEntity<World> signPlayerUpForWorld(@PathVariable Long worldId, @PathVariable Long playerId){
+        return new ResponseEntity<>(worldService.signPlayerUpForWorld(worldId, playerId ), HttpStatus.OK);
     }
 
 }
